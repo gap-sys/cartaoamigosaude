@@ -1,0 +1,57 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.footer {
+  padding: 3rem 0 2rem 0;
+  background-color: $color-primary;
+  .section-footer {
+    @include container;
+    .section-policys {
+      .policys {
+        color: $color-snow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 13px;
+        color: $color-snow;
+        list-style: none;
+        text-align: center;
+        @media (max-width: 1204px) {
+          flex-direction: column;
+          gap: 1.5rem;
+          font-weight: 300;
+        }
+        .title {
+          text-align: center;
+        }
+      }
+    }
+    .section-adm {
+      text-align: center;
+      color: $color-snow;
+      margin-top: 3.5rem;
+      .title {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 33px;
+        @media (max-width: 1204px) {
+          font-weight: 300;
+        }
+      }
+      .subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 33px;
+        @media (max-width: 980px) {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.header {
+  @include container(1280px, 5rem auto 4rem auto);
+  .title {
+    color: $color-secondary;
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 1rem;
+    @media (max-width: 880px) {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    @media (max-width: 1084px) {
+      flex-direction: column;
+    }
+    .sectionParagraph {
+      .paragraph {
+        color: $color-grayMedium;
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 16px;
+        text-align: justify;
+        margin: 1rem 0 0 0;
+      }
+    }
+    .sectionImg {
+      width: 100%;
+      img {
+        max-width: 450px;
+        border-radius: 20px;
+        @media (max-width: 1084px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  @include container(1280px, 0rem auto 0 auto);
+  @include display-flex(flex-start, space-between);
+  @media (max-width: 880px) {
+    flex-direction: column;
+  }
+  .column {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 880px) {
+    flex-direction: column;
+  }
+  img {
+    width: 50px;
+    margin-right: 0.4rem;
+    @media (max-width: 880px) {
+      width: 80px;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+    color: $color-secondary;
+  }
+}
+
+.paragraph {
+  font-size: 16px;
+  color: $color-grayMedium;
+  line-height: 24px;
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 20px;
+
+  li {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-grayMedium;
+    margin-bottom: 1rem;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.strip-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+  
+    .background {
+      position: absolute;
+      inset: 0;
+      background-color: $color-primary; 
+    }
+  
+    .animated-bar {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background-color: $color-secondary;
+      animation: slide 3s infinite alternate ease-in-out;
+    }
+  
+    .content {
+      position: relative;
+      z-index: 2;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      @media (max-width: 880px) {
+       font-size: 14px;
+       line-height: 14px;
+      }
+      .tel {
+        font-weight: 700;
+      }
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      left: -50%;
+    }
+    50% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  

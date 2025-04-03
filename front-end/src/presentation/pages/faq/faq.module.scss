@@ -1,0 +1,60 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.accordion {
+  @include container(1280px, 2rem auto 4rem auto);
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  margin-top: 4rem;
+  overflow: hidden;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e1e4e8;
+
+  .title {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  .content {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $color-grayMedium;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+
+  .icon {
+    font-size: 24px;
+    line-height: 16px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.accordionItem.active {
+  .accordionHeader {
+    color: $color-primary;
+  }
+  .icon {
+    color: $color-primary;
+  }
+}
+.accordionHeader {
+  @include hover;
+  width: 100%;
+  font-weight: 600;
+  padding: 1.25rem 1rem;
+  color: $color-secondary;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

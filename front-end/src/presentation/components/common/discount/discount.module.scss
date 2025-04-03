@@ -1,0 +1,147 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.containerBoss {
+  padding: 0 1rem;
+  .container {
+    @include container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 0 40px;
+    background: url('../../../assets/images/FUNDO_REMEDIOS.webp') no-repeat center;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+      border-radius: 12px;
+    }
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    position: relative;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .text {
+    flex: 1;
+
+    h2 {
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 600;
+      color: $color-secondary;
+      @media (max-width: 824px) {
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: rgb(122, 122, 122);
+      margin: 2rem 0;
+    }
+
+    .partners {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 80px;
+      .space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      img {
+        height: 35px;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .accordion {
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    .accordionTitle {
+      @include hover;
+      font-weight: 600;
+      color: $color-secondary;
+      font-size: 16px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    .accordionContent {
+      margin-top: 10px;
+      font-size: 14px;
+      color: $color-grayMedium;
+    }
+    .listNumbers {
+      list-style-type: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $color-grayMedium;
+      li {
+        margin-bottom: 0.75rem;
+      }
+    }
+    .listTexts {
+      list-style: disc;
+      padding-left: 1.5rem;
+      li {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    strong {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .image {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    @media (max-width: 1084px) {
+      position: static;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    img {
+      width: 500px;
+      @media (max-width: 1084px) {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+    }
+  }
+}

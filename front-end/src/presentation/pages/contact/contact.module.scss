@@ -1,0 +1,6 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.container {
+  @include container(1280px, 4rem auto 4rem auto);
+}

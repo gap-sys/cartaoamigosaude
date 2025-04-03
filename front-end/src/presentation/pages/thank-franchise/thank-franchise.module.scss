@@ -1,0 +1,35 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.container {
+  @include container(1280px, 29.5rem auto 28.5rem auto);
+  @include display-flex;
+  flex-direction: column;
+  @media (max-width: 880px) {
+    @include container(1280px, 15.5rem auto 15.5rem auto);
+  }
+  h1 {
+    color: $color-secondary;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    @media (max-width: 880px) {
+      font-size: 35px;
+      line-height: 35px;
+      text-align: center;
+    }
+  }
+  p {
+    color: $color-grayMedium;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    text-align: center;
+    @media (max-width: 880px) {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+}

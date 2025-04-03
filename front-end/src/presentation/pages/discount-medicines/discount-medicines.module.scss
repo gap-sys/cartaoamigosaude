@@ -1,0 +1,10 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.container {
+  margin: 0 1rem;
+  @include container(1250px, 2rem auto 2rem auto);
+  img {
+    width: 100%;
+  }
+}

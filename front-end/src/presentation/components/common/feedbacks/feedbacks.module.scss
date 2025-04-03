@@ -1,0 +1,95 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.anomecarua {
+  @include container(1280px, 2rem auto 0rem auto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  .feedbackContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  .feedbackText {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      align-items: flex-start;
+      width: 90%;
+    }
+
+    .titleFeedback {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 600;
+      color: $color-secondary;
+      @media (max-width: 1024px) {
+        align-items: flex-start;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .sliderWrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .swiperContainer {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .swiperSlide {
+      @media (max-width: 824px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        font-style: italic;
+        font-size: 15px;
+        color: $color-grayMedium;
+        line-height: 23px;
+        font-weight: 400;
+        margin: 1rem 0rem 2rem 0rem;
+        @media (max-width: 824px) {
+          text-align: center;
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .feedbackImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}

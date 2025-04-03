@@ -1,0 +1,46 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.btn {
+  font-family: $font-default;
+  font-weight: $weight-medium;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+
+.btn1 {
+  color: $color-snow;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: $color-primary;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 0.8rem 1.6rem;
+}
+
+.btn2 {
+  color: $color-snow;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: $color-primary;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 0.8rem 0;
+  margin-top: 1rem;
+}
+
+.btn3 {
+}
+
+.btn4 {
+  color: $color-snow;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: $color-primary;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 0.8rem 0;
+}
+
+.btn5 {
+}

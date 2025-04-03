@@ -1,0 +1,114 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.container {
+  @include container(1280px, 3rem auto 4.5rem auto);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  @media (max-width: 868px) {
+    flex-direction: column;
+  }
+}
+
+.sectionImage img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sectionContent {
+  max-width: 600px;
+  width: 100%;
+  .link {
+    @media (max-width: 868px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.sectionTitle {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 1.25rem;
+  color: $color-secondary;
+  @media (max-width: 868px) {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+}
+
+.sectionText {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-grayMedium;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.advantages {
+  @include container(1280px, 5rem auto 5rem auto);
+  .boxContainer {
+    text-align: center;
+    background-color: $color-secondary;
+    border-radius: 20px;
+    color: $color-snow;
+    padding: 2rem 4rem;
+
+    @media (max-width: 924px) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    @media (max-width: 1024px) {
+      font-size: 35px;
+      line-height: 35px;
+      font-weight: 600;
+    }
+  }
+
+  .boxSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 984px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .box {
+      h3 {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 600;
+        @media (max-width: 1024px) {
+          font-weight: 500;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+}

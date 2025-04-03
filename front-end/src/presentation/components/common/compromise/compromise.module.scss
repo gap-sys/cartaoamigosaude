@@ -1,0 +1,44 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.container {
+  @include container(1280px, 5rem auto 5rem auto);
+
+  .boxSection {
+    text-align: center;
+    background-color: $color-secondary;
+    border-radius: 20px;
+    color: $color-snow;
+    padding: 4rem;
+
+    @media (max-width: 924px) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+
+    @media (max-width: 1024px) {
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: 600;
+    }
+  }
+
+  .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 15px;
+      line-height: 23px;
+      font-weight: 400;
+    }
+  }
+}

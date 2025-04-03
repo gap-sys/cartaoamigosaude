@@ -1,0 +1,41 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.container {
+  @include container;
+  margin-bottom: 5.5rem;
+
+  .pFirst {
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-grayMedium;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 24px;
+
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-grayMedium;
+      line-height: 24px;
+    }
+  }
+
+  i {
+    color: $color-primary;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
