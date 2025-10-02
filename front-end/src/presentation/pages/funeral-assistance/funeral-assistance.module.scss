@@ -23,23 +23,57 @@
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
   }
 
+  h2 {
+    color: $color-secondary;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
   p {
     margin-bottom: 1rem;
   }
 
-  ul {
+  ul, ol {
     margin-left: 1.25rem;
     margin-bottom: 1rem;
-    list-style-type: disc;
-
+    
     li {
       margin-bottom: 0.5rem;
     }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 
   @media (max-width: 768px) {
     padding: 1.5rem;
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+
+.buttonContainerLeft {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.075rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0.875rem;
   }
 }

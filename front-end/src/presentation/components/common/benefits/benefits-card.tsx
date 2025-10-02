@@ -29,6 +29,13 @@ const BENEFITS = [
     label: 'Entenda o benefício',
   },
   {
+    image: IMAGE.ICONE_AMPLA_REDE,
+    title: 'Assistência Residencial',
+    description: 'Serviços de assistência técnica residencial para sua casa.',
+    href: '/assistencia-residencial',
+    label: 'Saiba mais',
+  },
+  {
     image: IMAGE.TAG,
     title: 'Empréstimo de Equipamentos Médicos',
     description: 'Veja como solicitar empréstimos com base no regulamento.',

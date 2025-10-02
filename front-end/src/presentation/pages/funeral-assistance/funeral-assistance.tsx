@@ -1,112 +1,176 @@
-import { Hero, Meta } from 'src/presentation/components'
+import React from 'react'
+import { Hero, Meta, Button } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
-
 import S from './funeral-assistance.module.scss'
 
-const FuneralAssistance = () => {
+export const FuneralAssistance: React.FC = () => {
   return (
     <div>
       <Meta
-        title="Assistência Funeral - Cartão Amigo Saúde"
-        description="O Cartão Amigo Saúde oferece reembolso de até R$ 3.000,00 em despesas funerárias. Saiba como funciona o benefício, quem tem direito e como solicitar de forma simples e segura."
-        keywords="assistência funeral, reembolso funeral, Cartão Amigo Saúde, benefício funeral, despesas funerárias, auxílio funeral, morte do titular"
+        title="Auxílio Funeral | Cartão Amigo Saúde"
+        description="Conheça o benefício de Auxílio Funeral do Cartão Amigo Saúde. Assistência completa em momentos difíceis com cobertura nacional."
+        keywords="auxílio funeral, cartão amigo saúde, assistência funeral, sepultamento, cremação"
       />
-      <Hero imageUrl={IMAGE.FUNERAL.src} text="Assistência Funeral" />
+      <Hero imageUrl={IMAGE.FUNERAL.src} text="Auxílio Funeral" />
       <div className={S.container}>
+        <div className={S.card}>
+          <h2>Regulamento Completo</h2>
+          <p>
+            Para consultar o regulamento completo do benefício de Auxílio Funeral, clique no botão abaixo:
+          </p>
+          <div className={S.buttonContainerLeft}>
+            <Button 
+              typeStyle="btn1" 
+              label="Ver Regulamento Completo (PDF)" 
+              onClick={() => window.open('/Funeral Assist Jul_25.pdf', '_blank')}
+              width="310px"
+            />
+          </div>
+        </div>
+
         <div className={S.card}>
           <h2>Objetivo do Serviço</h2>
           <p>
-            O Auxílio Funeral é um benefício oferecido pelo Cartão Amigo Saúde, destinado a reembolsar as despesas
-            funerárias realizadas pela família do titular do cartão, até o valor máximo de R$ 3.000,00 (três mil reais),
-            mediante apresentação de documentação comprobatória.
+            O Auxílio Funeral oferece assistência completa e especializada em momentos de luto, proporcionando 
+            suporte integral para os procedimentos funerários através de uma rede credenciada nacional, 
+            garantindo dignidade e tranquilidade para a família enlutada.
           </p>
         </div>
 
         <div className={S.card}>
           <h2>Beneficiários do Serviço</h2>
           <p>
-            2.1. O benefício é exclusivo para o titular do Cartão Amigo Saúde e será disponibilizado aos seus
-            dependentes legais (cônjuge, filhos, ou parentes designados legalmente) após o falecimento do titular.
+            O benefício é destinado ao titular do Cartão Amigo Saúde e seus dependentes legais, incluindo:
           </p>
-          <p>2.2. Apenas um reembolso será concedido por titular.</p>
+          <ul>
+            <li>Cônjuge ou companheiro(a) em união estável</li>
+            <li>Filhos solteiros até 21 anos de idade</li>
+            <li>Filhos solteiros até 24 anos se universitários</li>
+            <li>Filhos inválidos de qualquer idade</li>
+            <li>Pais do titular (mediante comprovação de dependência econômica)</li>
+          </ul>
           <p>
-            2.3. Períodos de Carência: O benefício estará disponível após 120 (cento e vinte) dias da aquisição do
-            Programa Cartão Amigo Saúde.
-          </p>
-          <p>2.4. Idade para Ingresso: O benefício está disponível para pessoas com idade entre 18 e 75 anos.</p>
-        </div>
-
-        <div className={S.card}>
-          <h2>Valor do Reembolso</h2>
-          <p>3.1. O valor máximo reembolsável é de R$ 3.000,00 (três mil reais).</p>
-          <p>
-            3.2. O reembolso será limitado às despesas comprovadas por meio de notas fiscais emitidas em nome de um
-            familiar ou responsável indicado.
+            O serviço está disponível em todo território nacional, conforme cobertura da rede credenciada.
           </p>
         </div>
 
         <div className={S.card}>
-          <h2>Condições para Solicitação do Reembolso</h2>
-          <p>4.1. Para solicitar o reembolso, os familiares devem apresentar:</p>
+          <h2>Valor de Reembolso</h2>
+          <p>
+            O Cartão Amigo Saúde oferece reembolso de até <strong>R$ 3.500,00 (três mil e quinhentos reais)</strong> 
+            para despesas com serviços funerários, mediante apresentação de notas fiscais e comprovantes válidos.
+          </p>
+          <p>
+            O reembolso será processado em até 30 (trinta) dias úteis após a entrega completa da documentação 
+            exigida e aprovação da análise.
+          </p>
+        </div>
+
+        <div className={S.card}>
+          <h2>Serviços Cobertos</h2>
+          <p>O Auxílio Funeral cobre os seguintes serviços e produtos:</p>
           <ul>
-            <li>Certidão de óbito do titular;</li>
-            <li>
-              Notas fiscais originais das despesas funerárias (exemplo: caixão, velório, cremação, transporte, entre
-              outros);
-            </li>
-            <li>Documento de identificação do solicitante (RG ou CPF);</li>
-            <li>Comprovante de vínculo familiar ou designação legal (se necessário).</li>
+            <li>Caixão ou urna funerária</li>
+            <li>Ornamentação e flores</li>
+            <li>Velas e paramentos</li>
+            <li>Transporte do corpo (dentro do município)</li>
+            <li>Preparação e conservação do corpo</li>
+            <li>Documentação necessária (certidões, alvarás)</li>
+            <li>Taxa de sepultamento ou cremação</li>
+            <li>Coroa de flores</li>
+            <li>Livro de presença</li>
+            <li>Serviços de tanatopraxia básica</li>
           </ul>
-          <p>4.2. As notas fiscais devem conter:</p>
-          <ul>
-            <li>Nome e CNPJ da empresa prestadora do serviço;</li>
-            <li>Descrição detalhada dos serviços contratados;</li>
-            <li>Data compatível com o óbito do titular.</li>
-          </ul>
+        </div>
+
+        <div className={S.card}>
+          <h2>Condições de Utilização</h2>
+          <p>
+            <strong>Carência:</strong> O benefício possui carência de 180 (cento e oitenta) dias corridos 
+            a partir da data de adesão ao Cartão Amigo Saúde, exceto em casos de morte por acidente.
+          </p>
+          <p>
+            <strong>Morte por acidente:</strong> Não há carência para óbitos decorrentes de acidentes, 
+            desde que ocorram após 24 horas da adesão ao cartão.
+          </p>
+          <p>
+            <strong>Limite anual:</strong> O benefício pode ser utilizado quantas vezes necessário durante 
+            a vigência do cartão, respeitando o valor máximo de reembolso por evento.
+          </p>
         </div>
 
         <div className={S.card}>
           <h2>Procedimento para Solicitação</h2>
           <p>
-            5.1. A solicitação de reembolso deve ser feita na Central de Atendimento Cartão Amigo Saúde ou pelo canal
-            oficial indicado no site/app.
+            Para solicitar o Auxílio Funeral, siga os seguintes passos:
           </p>
+          <ol>
+            <li>Entre em contato imediatamente com a Central de Atendimento: <strong>0800 878 0000</strong></li>
+            <li>Informe o número do cartão e dados do beneficiário falecido</li>
+            <li>Receba orientações sobre a rede credenciada mais próxima</li>
+            <li>Guarde todas as notas fiscais e comprovantes de pagamento</li>
+            <li>Envie a documentação completa para análise e reembolso</li>
+          </ol>
           <p>
-            5.2. O prazo para entrada no pedido de reembolso é de até 90 (noventa) dias após o falecimento do titular.
-          </p>
-          <p>
-            5.3. O prazo de análise e processamento do reembolso é de até 30 (trinta) dias úteis, contados a partir do
-            envio completo da documentação exigida.
+            <strong>Atendimento 24 horas:</strong> A Central de Atendimento funciona 24 horas por dia, 
+            7 dias por semana, incluindo feriados.
           </p>
         </div>
 
         <div className={S.card}>
-          <h2>Exclusões de Cobertura</h2>
-          <p>O reembolso não será concedido em casos de:</p>
+          <h2>Documentação Necessária</h2>
+          <p>Para solicitar o reembolso, é necessário apresentar:</p>
           <ul>
-            <li>
-              6.1. Falta de comprovação das despesas (notas fiscais incompatíveis, ilegíveis ou sem validade jurídica);
-            </li>
-            <li>6.2. Despesas realizadas fora do território nacional;</li>
-            <li>6.3. Solicitações fora do prazo estabelecido neste regulamento;</li>
-            <li>6.4. Serviços funerários contratados antes da ativação do Cartão Amigo Saúde.</li>
-            <li>6.5. Em caso de inadimplência das mensalidades do benefício.</li>
+            <li>Certidão de óbito original</li>
+            <li>Cópia do RG e CPF do falecido</li>
+            <li>Cópia do cartão Amigo Saúde</li>
+            <li>Notas fiscais originais dos serviços funerários</li>
+            <li>Comprovantes de pagamento</li>
+            <li>Formulário de solicitação de reembolso preenchido</li>
+            <li>Dados bancários para depósito (conta corrente ou poupança)</li>
           </ul>
+        </div>
+
+        <div className={S.card}>
+          <h2>Exclusões de Cobertura</h2>
+          <p>O Auxílio Funeral não cobre:</p>
+          <ul>
+            <li>Óbitos decorrentes de suicídio nos primeiros 24 meses de vigência</li>
+            <li>Morte em decorrência de guerra, motim ou comoção civil</li>
+            <li>Sepultamentos em jazigos perpétuos ou particulares</li>
+            <li>Transporte do corpo para outras cidades (exceto se contratado à parte)</li>
+            <li>Serviços não relacionados diretamente ao funeral</li>
+            <li>Despesas com alimentação ou hospedagem de familiares</li>
+            <li>Missas, cultos ou cerimônias religiosas</li>
+            <li>Lápides, monumentos ou ornamentações permanentes</li>
+          </ul>
+        </div>
+
+        <div className={S.card}>
+          <h2>Rede Credenciada</h2>
+          <p>
+            O Cartão Amigo Saúde possui uma ampla rede de funerárias credenciadas em todo o Brasil, 
+            oferecendo atendimento de qualidade e preços diferenciados para os beneficiários.
+          </p>
+          <p>
+            Para localizar a funerária credenciada mais próxima, entre em contato com a Central de 
+            Atendimento ou consulte o aplicativo Cartão Amigo Saúde.
+          </p>
         </div>
 
         <div className={S.card}>
           <h2>Disposições Gerais</h2>
           <p>
-            7.1. Este regulamento está sujeito a alterações mediante aviso prévio de 30 (trinta) dias aos titulares do
-            Cartão Amigo Saúde.
+            Este regulamento está sujeito a alterações mediante aviso prévio de 30 (trinta) dias aos 
+            titulares do Cartão Amigo Saúde.
           </p>
           <p>
-            7.2. O reembolso será realizado exclusivamente na conta bancária indicada pelo solicitante e devidamente
-            validada pela empresa.
+            O benefício está condicionado à adimplência das mensalidades do Cartão Amigo Saúde e ao 
+            cumprimento das condições estabelecidas neste regulamento.
           </p>
           <p>
-            7.3. Para dúvidas ou informações adicionais, entre em contato com a Central de Atendimento do Cartão Amigo
-            Saúde.
+            Em caso de dúvidas ou necessidade de esclarecimentos adicionais, entre em contato com a 
+            Central de Atendimento do Cartão Amigo Saúde.
           </p>
           <p>
             <strong>Cartão Amigo Saúde</strong>
@@ -118,5 +182,3 @@ const FuneralAssistance = () => {
     </div>
   )
 }
-
-export default FuneralAssistance
