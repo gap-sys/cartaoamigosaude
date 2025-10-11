@@ -1,4 +1,6 @@
-import { Hero } from 'src/presentation/components'
+import Link from 'next/link'
+
+import { Hero, Meta, Button } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
 import S from './life-insurance.module.scss'
@@ -6,6 +8,11 @@ import S from './life-insurance.module.scss'
 const LifeInsurance = () => {
   return (
     <div>
+      <Meta
+        title="Seguro de Vida | Cartão Amigo Saúde"
+        description="Condições gerais do Seguro de Vida (Acidentes Pessoais) do Cartão Amigo Saúde."
+        keywords="seguro de vida, AP, condições gerais, cartão amigo saúde"
+      />
       <Hero imageUrl={IMAGE.SEGURO_DE_VIDA.src} text="Seguro de vida" />
       <div className={S.container}>
         {/* Card 1 */}
@@ -41,6 +48,14 @@ const LifeInsurance = () => {
             redução ou impotência funcional definitiva dos membros ou órgãos, em decorrência de lesão física sofrida
             pelo Cliente, em caráter permanente, em consequência de acidente pessoal coberto.
           </p>
+          <div className={S.buttonContainerLeft}>
+            <Button
+              typeStyle="btn1"
+              label="Ver Condições Gerais (PDF)"
+              onClick={() => window.open('/CG AP Coletivo 20250221.pdf', '_blank')}
+              width="310px"
+            />
+          </div>
         </div>
 
         {/* Card 2 */}
@@ -115,6 +130,14 @@ const LifeInsurance = () => {
             ou via telefone <strong>0800 323 5084</strong>.
           </p>
         </div>
+      </div>
+       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
+        </Link>
       </div>
     </div>
   )

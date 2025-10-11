@@ -1,6 +1,8 @@
-import React from 'react'
+import Link from 'next/link'
+
 import { Hero, Meta, Button } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
+
 import S from './funeral-assistance.module.scss'
 
 export const FuneralAssistance: React.FC = () => {
@@ -22,7 +24,7 @@ export const FuneralAssistance: React.FC = () => {
             <Button 
               typeStyle="btn1" 
               label="Ver Regulamento Completo (PDF)" 
-              onClick={() => window.open('/Funeral Assist Jul_25.pdf', '_blank')}
+              onClick={() => window.open('/Funeral Individual JUL_25.pdf', '_blank')}
               width="310px"
             />
           </div>
@@ -57,7 +59,7 @@ export const FuneralAssistance: React.FC = () => {
         <div className={S.card}>
           <h2>Valor de Reembolso</h2>
           <p>
-            O Cartão Amigo Saúde oferece reembolso de até <strong>R$ 3.500,00 (três mil e quinhentos reais)</strong> 
+            O Cartão Amigo Saúde oferece reembolso de até <strong>R$ 3.000,00 (três mil e quinhentos reais)</strong> 
             para despesas com serviços funerários, mediante apresentação de notas fiscais e comprovantes válidos.
           </p>
           <p>
@@ -105,7 +107,7 @@ export const FuneralAssistance: React.FC = () => {
             Para solicitar o Auxílio Funeral, siga os seguintes passos:
           </p>
           <ol>
-            <li>Entre em contato imediatamente com a Central de Atendimento: <strong>0800 878 0000</strong></li>
+            <li>Entre em contato imediatamente com a Central de Atendimento: <strong>0800 880 7515</strong></li>
             <li>Informe o número do cartão e dados do beneficiário falecido</li>
             <li>Receba orientações sobre a rede credenciada mais próxima</li>
             <li>Guarde todas as notas fiscais e comprovantes de pagamento</li>
@@ -178,6 +180,14 @@ export const FuneralAssistance: React.FC = () => {
             Cuidando de você e da sua família em todos os momentos.
           </p>
         </div>
+      </div>
+       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
+        </Link>
       </div>
     </div>
   )

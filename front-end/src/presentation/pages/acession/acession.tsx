@@ -1,4 +1,6 @@
-import { Hero, Meta } from 'src/presentation/components'
+import Link from 'next/link'
+
+import { Meta, Hero } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
 import S from './acession.module.scss'
@@ -6,6 +8,7 @@ import S from './acession.module.scss'
 const Acession = () => {
   return (
     <div>
+      <main>
        <Meta
         title="Contrato de Adesão - Cartão Amigo Saúde"
         description="Leia o contrato completo de adesão ao Cartão Amigo Saúde. Entenda os direitos, deveres e condições para utilização dos serviços e benefícios oferecidos."
@@ -203,8 +206,17 @@ const Acession = () => {
           um só fim e efeito.
         </p>
       </div>
+      </main>
+      <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
+        </Link>
+      </div>
     </div>
-  )
+    )
 }
 
 export default Acession

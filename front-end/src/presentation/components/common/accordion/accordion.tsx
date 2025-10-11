@@ -6,6 +6,7 @@ const ITEMS = [
   { title: 'Desconto em Medicamentos', path: '/desconto-em-medicamentos' },
   { title: 'Empréstimo de Equipamentos Médico Hospitalar', path: '/emprestimo-de-equipamentos-medico-hospitalar' },
   { title: 'Seguro de Vida', path: '/seguro-de-vida' },
+  { title: 'Assistência Residencial', path: '/assistencia-residencial' },
   { title: 'Auxílio Funeral', path: '/auxilio-funeral' },
   { title: 'Clube Certo', path: '/clube-certo' },
 ]

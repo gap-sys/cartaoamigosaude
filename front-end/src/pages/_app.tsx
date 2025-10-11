@@ -1,22 +1,10 @@
-import { type NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import { type ReactElement, type ReactNode } from 'react'
 
-import { DefaultLayout, Meta } from 'src/presentation/components'
+import { Meta } from 'src/presentation/components'
 
 import 'src/presentation/styles/global.scss'
 
-type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
-
-export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>)
-
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Meta
@@ -25,7 +13,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         keywords="cartão de saúde, telemedicina, desconto em consultas, desconto em exames, farmácias, plano de saúde acessível, saúde sem carência, assistência funeral, seguro de vida"
       />
 
-      {getLayout(<Component {...pageProps} />)}
+      <Component {...pageProps} />
     </>
   )
 }

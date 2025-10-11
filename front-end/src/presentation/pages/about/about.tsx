@@ -1,5 +1,6 @@
-import { Hero, Meta, Spotlight } from 'src/presentation/components'
+import { Hero, Meta, Spotlight, Strip, Navbar, Sac, Footer } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
+import Link from 'next/link'
 
 import S from './about.module.scss'
 
@@ -8,7 +9,7 @@ const About = () => {
     'Sua Parceira Confiável na Jornada de Bem-Estar e Saúde Fundado em 2011, somos uma empresa comprometida em proporcionar a melhor experiência em cuidados de saúde com o melhor custo-benefício. Localizada no coração do interior de São Paulo, na cidade de São Pedro, nossa jornada começou com a missão de oferecer soluções inovadoras para as necessidades médicas da população.',
     'Nos destacamos pela excelência no atendimento personalizado e pela moderna infraestrutura que garantem o máximo conforto e bem-estar para nossos pacientes. Ao longo dos anos, desenvolvemos um modelo de negócio único, combinando um cartão de saúde com um centro médico, formando uma abrangente rede de profissionais em diversas especialidades médicas, odontológicas e não-médicas.',
     'Em 2023, alçamos novos voos e nos tornamos uma Franqueadora, liderada pelos sócios-fundadores Allan Bertho e Letícia Antonelli. Essa expansão é fruto de nossa paixão em proporcionar cuidados médicos de qualidade e aprimorar o acesso à saúde em todo o país.',
-    'Nossa história é diretamente ligada à Clínica Mão Amiga, aonde nasceu o “Cartão Amigo Saúde”, reforçamos nossa missão de sermos mais do que Cartão de Benefícios, fomos em buscar de novos Benefícios exclusivos para nossos clientes.',
+    'Nossa história é diretamente ligada à Clínica Mão Amiga, aonde nasceu o "Cartão Amigo Saúde", reforçamos nossa missão de sermos mais do que Cartão de Benefícios, fomos em buscar de novos Benefícios exclusivos para nossos clientes.',
     'Somos um amigo e parceiro confiável em sua jornada de bem-estar e saúde.',
     'Acreditamos na importância de tornar a saúde acessível a todos e, por meio de nossa franquia, convidamos empreendedores a fazerem parte de nossa rede, compartilhando a visão de oferecer serviços médicos de alta qualidade e cuidado humano a um número cada vez maior de pessoas.',
     'Junte-se a nós e experimente uma nova era em cuidados com a saúde. Seja você também um Amigo da Saúde!',
@@ -16,12 +17,15 @@ const About = () => {
 
   return (
     <div>
-      <Meta
-        title="Quem somos - Cartão Amigo Saúde"
-        description="Conheça a história, missão, visão e valores do Cartão Amigo Saúde. Desde 2011, somos referência em cuidados acessíveis, com atendimento humanizado e inovação na área da saúde."
-        keywords="sobre o Cartão Amigo Saúde, história, missão, visão, valores, saúde acessível, bem-estar, franquia de saúde, atendimento humanizado"
-      />
-      <Hero imageUrl={IMAGE.MAE_SEGURANDO_BEBE.src} text="Sobre Nós" />
+      <Strip />
+      <Navbar />
+      <main>
+        <Meta
+          title="Quem somos - Cartão Amigo Saúde"
+          description="Conheça a história, missão, visão e valores do Cartão Amigo Saúde. Desde 2011, somos referência em cuidados acessíveis, com atendimento humanizado e inovação na área da saúde."
+          keywords="sobre o Cartão Amigo Saúde, história, missão, visão, valores, saúde acessível, bem-estar, franquia de saúde, atendimento humanizado"
+        />
+        <Hero imageUrl={IMAGE.MAE_SEGURANDO_BEBE.src} text="Sobre Nós" />
       <div className={S.header}>
         <h1 className={S.title}>Sua Parceira Confiável na Jornada de Bem-Estar e Saúde</h1>
         <div className={S['section-title']}>
@@ -96,6 +100,17 @@ const About = () => {
         titleSize="32px"
         buttonLabel="Conheça nossos planos"
       />
+      </main>
+      <Sac />
+      <Footer />
+      <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
+        </Link>
+      </div>
     </div>
   )
 }

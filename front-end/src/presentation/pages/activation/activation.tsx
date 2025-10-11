@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Hero, Meta } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
@@ -6,12 +8,13 @@ import S from './activation.module.scss'
 const Activation = () => {
   return (
     <div>
-      <Meta
-        title="Ativação e Utilização - Cartão Amigo Saúde"
-        description="Saiba como ativar o seu Cartão Amigo Saúde e utilizar todos os serviços oferecidos, como consultas, exames e atendimento odontológico com preços acessíveis."
-        keywords="ativação do cartão, como usar o Cartão Amigo Saúde, agendamento de consultas, exames com desconto, saúde acessível, cartão de benefícios, recarga de cartão saúde"
+      <main>
+       <Meta
+        title="Ativação do Cartão - Cartão Amigo Saúde"
+        description="Ative seu Cartão Amigo Saúde e comece a usufruir de todos os benefícios e descontos em saúde. Processo rápido e simples para começar a economizar."
+        keywords="ativação cartão, Cartão Amigo Saúde, ativar benefícios, descontos saúde, processo de ativação, começar a usar"
       />
-      <Hero imageUrl={IMAGE.DOIS_HOMENS_ACORDO.src} text="Ativação e Utilização" />
+      <Hero imageUrl={IMAGE.DOIS_HOMENS_ACORDO.src} text="Ativação do Cartão" />
       <div className={S.container}>
         <div className={S.card}>
           <p>
@@ -62,6 +65,15 @@ const Activation = () => {
             da disponibilidade de crédito.
           </p>
         </div>
+      </div>
+      </main>
+      <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
+        </Link>
       </div>
     </div>
   )

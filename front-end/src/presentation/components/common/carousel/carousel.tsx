@@ -14,7 +14,6 @@ const Carousel = () => {
   const CAROUSEL = [
     { src: IMAGE.BANNER_1.src, link: '/#planos' },
     { src: IMAGE.BANNER_2.src, link: '/baixe-o-app' },
-    { src: IMAGE.BANNER_4.src, link: 'https://www.reverde.com.br/desconto-na-luz?re=cv4tt' },
     { src: IMAGE.BANNER_3.src, link: '#' },
   ]
 

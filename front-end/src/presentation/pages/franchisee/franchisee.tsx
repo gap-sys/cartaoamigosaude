@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
-import { Button, Meta, FranchiseeAbout } from 'src/presentation/components'
+import { Button, Meta, FranchiseeAbout, Strip, Navbar, Sac, Footer } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 
 import S from './franchisee.module.scss'
@@ -40,6 +40,9 @@ const Franchisee = () => {
 
   return (
     <div>
+      <Strip />
+      <Navbar />
+      <main>
       <Meta
         title="Seja um Franqueado - Cartão Amigo Saúde"
         description="Transforme sua carreira e empreenda com propósito. Torne-se um franqueado da Amigo Saúde e leve cuidados de saúde acessíveis para sua região com suporte completo."
@@ -178,6 +181,17 @@ const Franchisee = () => {
         </p>
         <Link href="#formulario">
           <Button typeStyle="btn2" label="Preencher Formulário" width="220px" />
+        </Link>
+      </div>
+      </main>
+      <Sac />
+      <Footer />
+      <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
+          target="_blank"
+        >
+          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
         </Link>
       </div>
     </div>
