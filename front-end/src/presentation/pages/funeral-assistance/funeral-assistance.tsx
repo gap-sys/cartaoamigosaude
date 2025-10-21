@@ -2,10 +2,11 @@ import { Button } from '../../components'
 import Hero from '../../components/common/hero/hero'
 import { IconCircleCheck, IconCircleX, IconFileText, IconPhoneCall, IconInfoCircle, IconUsers, IconCash, IconClipboardList, IconAlertTriangle } from '@tabler/icons-react'
 import S from './funeral-assistance.module.scss'
+import { IMAGE } from 'src/presentation/assets'
 
 export const FuneralAssistance: React.FC = () => {
-  const heroImageUrl = 'https://images.unsplash.com/photo-1549388604-817d15aa0110?ixlib=rb-4.0.3&q=80&w=2670&auto=format&fit=crop'
-
+  const heroImageUrl = IMAGE.FUNERAL.src
+  
   return (
     <div className={S.page}>
       <div className={S.heroSpacer}>
@@ -186,6 +187,3 @@ export const FuneralAssistance: React.FC = () => {
 }
 
 export default FuneralAssistance
-
-// Hero image URL mais representativa
-const heroImageUrl = "https://images.unsplash.com/photo-1461031189510-2d263b000f65?ixlib=rb-4.0.3&q=80&w=2670&auto=format&fit=crop";
