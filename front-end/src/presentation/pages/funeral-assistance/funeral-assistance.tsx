@@ -1,194 +1,191 @@
-import Link from 'next/link'
-
-import { Hero, Meta, Button } from 'src/presentation/components'
-import { IMAGE } from 'src/presentation/assets'
-
+import { Button } from '../../components'
+import Hero from '../../components/common/hero/hero'
+import { IconCircleCheck, IconCircleX, IconFileText, IconPhoneCall, IconInfoCircle, IconUsers, IconCash, IconClipboardList, IconAlertTriangle } from '@tabler/icons-react'
 import S from './funeral-assistance.module.scss'
 
 export const FuneralAssistance: React.FC = () => {
+  const heroImageUrl = 'https://images.unsplash.com/photo-1549388604-817d15aa0110?ixlib=rb-4.0.3&q=80&w=2670&auto=format&fit=crop'
+
   return (
-    <div>
-      <Meta
-        title="Auxílio Funeral | Cartão Amigo Saúde"
-        description="Conheça o benefício de Auxílio Funeral do Cartão Amigo Saúde. Assistência completa em momentos difíceis com cobertura nacional."
-        keywords="auxílio funeral, cartão amigo saúde, assistência funeral, sepultamento, cremação"
-      />
-      <Hero imageUrl={IMAGE.FUNERAL.src} text="Auxílio Funeral" />
+    <div className={S.page}>
+      <div className={S.heroSpacer}>
+        <Hero imageUrl={heroImageUrl} text="Auxílio Funeral" fullWidth />
+      </div>
+
       <div className={S.container}>
+        {/* Objetivo do serviço */}
         <div className={S.card}>
-          <h2>Regulamento Completo</h2>
+          <div className={S.titleRow}>
+            <IconInfoCircle size={20} className={S.titleIcon} />
+            <h2>Objetivo do serviço</h2>
+          </div>
           <p>
-            Para consultar o regulamento completo do benefício de Auxílio Funeral, clique no botão abaixo:
+            O Auxílio Funeral é um benefício oferecido pelo Cartão Amigo Saúde, destinado a reembolsar as despesas
+            funerárias realizadas pelo familiar titular do cartão, até o valor máximo de R$ 1.000,00 (mil reais), mediante
+            apresentação de documentação comprobatória.
           </p>
-          <div className={S.buttonContainerLeft}>
-            <Button 
-              typeStyle="btn1" 
-              label="Ver Regulamento Completo (PDF)" 
-              onClick={() => window.open('/Funeral Individual JUL_25.pdf', '_blank')}
-              width="310px"
+        </div>
+
+        {/* Beneficiários do serviço */}
+        <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconUsers size={20} className={S.titleIcon} />
+            <h2>Beneficiários do serviço</h2>
+          </div>
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O benefício é vinculado ao titular do Cartão Amigo Saúde e será disponibilizado aos seus dependentes legais de 1º grau.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Não se enquadram como dependentes legais: cônjuge convivente, sob guarda ou curatelado.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Período de carência: o benefício estará disponível após 10 (dez) meses da adesão ao Programa Cartão Amigo Saúde.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Valor de reembolso */}
+        <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconCash size={20} className={S.titleIcon} />
+            <h2>Valor de reembolso</h2>
+          </div>
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O valor máximo reembolsável é de R$ 1.000,00 (mil reais).</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O reembolso será efetuado exclusivamente para o titular do Cartão Amigo Saúde.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Condições para solicitação do reembolso */}
+        <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconFileText size={20} className={S.titleIcon} />
+            <h2>Condições para solicitação do reembolso</h2>
+          </div>
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Certidão de óbito.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Notas fiscais que comprovem as despesas funerárias (ex.: caixão, velório, cremação, transporte, entre outros).</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Documento oficial com foto do solicitante (RG/CPF).</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Comprovante de dados bancários do solicitante (quando necessário).</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Assinatura do termo de consentimento.</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Procedimento para solicitação */}
+        <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconClipboardList size={20} className={S.titleIcon} />
+            <h2>Procedimento para solicitação</h2>
+          </div>
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>A solicitação de reembolso deve ser feita na Central de Atendimento Cartão Amigo Saúde, pelo canal indicado no site/app.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O prazo para realização do pedido de reembolso é de até 90 (noventa) dias após o falecimento do titular.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O prazo de análise e processamento do reembolso é de até 30 (trinta) dias, contados a partir do envio completo da documentação exigida.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>O reembolso será realizado exclusivamente na conta bancária indicada pelo solicitante e devidamente validado pelos bancos.</span>
+            </li>
+          </ul>
+          <div className={S.buttonContainer}>
+            <Button
+              typeStyle="btn5"
+              label="Fazer a solicitação agora"
+              width="100%"
+              iconLeft={<IconCircleCheck size={18} />}
             />
           </div>
         </div>
 
+        {/* Exclusões de cobertura */}
         <div className={S.card}>
-          <h2>Objetivo do Serviço</h2>
-          <p>
-            O Auxílio Funeral oferece assistência completa e especializada em momentos de luto, proporcionando 
-            suporte integral para os procedimentos funerários através de uma rede credenciada nacional, 
-            garantindo dignidade e tranquilidade para a família enlutada.
-          </p>
-        </div>
-
-        <div className={S.card}>
-          <h2>Beneficiários do Serviço</h2>
-          <p>
-            O benefício é destinado ao titular do Cartão Amigo Saúde e seus dependentes legais, incluindo:
-          </p>
-          <ul>
-            <li>Cônjuge ou companheiro(a) em união estável</li>
-            <li>Filhos solteiros até 21 anos de idade</li>
-            <li>Filhos solteiros até 24 anos se universitários</li>
-            <li>Filhos inválidos de qualquer idade</li>
-            <li>Pais do titular (mediante comprovação de dependência econômica)</li>
+          <div className={S.titleRow}>
+            <IconAlertTriangle className={S.titleIconDanger} size={24} />
+            <h2>Exclusões de cobertura</h2>
+          </div>
+          <p className={S.sectionSubtitle}>O reembolso não será concedido em caso de:</p>
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleX size={18} className={S.iconCrossCircle} />
+              <span>Falta de comprovação das despesas (notas fiscais incompletas, ilegíveis ou sem validade jurídica).</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleX size={18} className={S.iconCrossCircle} />
+              <span>Despesas realizadas fora do território nacional.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleX size={18} className={S.iconCrossCircle} />
+              <span>Solicitações fora do prazo estabelecido neste regulamento.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleX size={18} className={S.iconCrossCircle} />
+              <span>Serviços/fornecedores contratados fora da rede do Cartão Amigo Saúde.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleX size={18} className={S.iconCrossCircle} />
+              <span>Em caso de inadimplência das mensalidades do benefício.</span>
+            </li>
           </ul>
-          <p>
-            O serviço está disponível em todo território nacional, conforme cobertura da rede credenciada.
-          </p>
+          <div className={S.buttonContainerLeft}>
+            <Button typeStyle="btn4" label="Ver Regulamento Completo (PDF)" width="100%" iconLeft={<IconFileText size={18} />} />
+          </div>
         </div>
 
-        <div className={S.card}>
-          <h2>Valor de Reembolso</h2>
-          <p>
-            O Cartão Amigo Saúde oferece reembolso de até <strong>R$ 3.000,00 (três mil e quinhentos reais)</strong> 
-            para despesas com serviços funerários, mediante apresentação de notas fiscais e comprovantes válidos.
-          </p>
-          <p>
-            O reembolso será processado em até 30 (trinta) dias úteis após a entrega completa da documentação 
-            exigida e aprovação da análise.
-          </p>
+        {/* Central de Atendimento */}
+        <div className={S.card + ' ' + S.centerText}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.875rem' }}>
+            <IconPhoneCall size={28} color="#6C75FF" />
+          </div>
+          <p>Para dúvidas ou informações adicionais, entre em contato com a Central de Atendimento do Cartão Amigo Saúde.</p>
+          <div className={S.buttonContainer}>
+            <Button
+              typeStyle="btn2"
+              label="Central de Atendimento"
+              width="100%"
+              iconLeft={<IconPhoneCall size={18} />}
+              style={{ backgroundColor: '#6D74FF' }}
+            />
+          </div>
         </div>
-
-        <div className={S.card}>
-          <h2>Serviços Cobertos</h2>
-          <p>O Auxílio Funeral cobre os seguintes serviços e produtos:</p>
-          <ul>
-            <li>Caixão ou urna funerária</li>
-            <li>Ornamentação e flores</li>
-            <li>Velas e paramentos</li>
-            <li>Transporte do corpo (dentro do município)</li>
-            <li>Preparação e conservação do corpo</li>
-            <li>Documentação necessária (certidões, alvarás)</li>
-            <li>Taxa de sepultamento ou cremação</li>
-            <li>Coroa de flores</li>
-            <li>Livro de presença</li>
-            <li>Serviços de tanatopraxia básica</li>
-          </ul>
-        </div>
-
-        <div className={S.card}>
-          <h2>Condições de Utilização</h2>
-          <p>
-            <strong>Carência:</strong> O benefício possui carência de 180 (cento e oitenta) dias corridos 
-            a partir da data de adesão ao Cartão Amigo Saúde, exceto em casos de morte por acidente.
-          </p>
-          <p>
-            <strong>Morte por acidente:</strong> Não há carência para óbitos decorrentes de acidentes, 
-            desde que ocorram após 24 horas da adesão ao cartão.
-          </p>
-          <p>
-            <strong>Limite anual:</strong> O benefício pode ser utilizado quantas vezes necessário durante 
-            a vigência do cartão, respeitando o valor máximo de reembolso por evento.
-          </p>
-        </div>
-
-        <div className={S.card}>
-          <h2>Procedimento para Solicitação</h2>
-          <p>
-            Para solicitar o Auxílio Funeral, siga os seguintes passos:
-          </p>
-          <ol>
-            <li>Entre em contato imediatamente com a Central de Atendimento: <strong>0800 880 7515</strong></li>
-            <li>Informe o número do cartão e dados do beneficiário falecido</li>
-            <li>Receba orientações sobre a rede credenciada mais próxima</li>
-            <li>Guarde todas as notas fiscais e comprovantes de pagamento</li>
-            <li>Envie a documentação completa para análise e reembolso</li>
-          </ol>
-          <p>
-            <strong>Atendimento 24 horas:</strong> A Central de Atendimento funciona 24 horas por dia, 
-            7 dias por semana, incluindo feriados.
-          </p>
-        </div>
-
-        <div className={S.card}>
-          <h2>Documentação Necessária</h2>
-          <p>Para solicitar o reembolso, é necessário apresentar:</p>
-          <ul>
-            <li>Certidão de óbito original</li>
-            <li>Cópia do RG e CPF do falecido</li>
-            <li>Cópia do cartão Amigo Saúde</li>
-            <li>Notas fiscais originais dos serviços funerários</li>
-            <li>Comprovantes de pagamento</li>
-            <li>Formulário de solicitação de reembolso preenchido</li>
-            <li>Dados bancários para depósito (conta corrente ou poupança)</li>
-          </ul>
-        </div>
-
-        <div className={S.card}>
-          <h2>Exclusões de Cobertura</h2>
-          <p>O Auxílio Funeral não cobre:</p>
-          <ul>
-            <li>Óbitos decorrentes de suicídio nos primeiros 24 meses de vigência</li>
-            <li>Morte em decorrência de guerra, motim ou comoção civil</li>
-            <li>Sepultamentos em jazigos perpétuos ou particulares</li>
-            <li>Transporte do corpo para outras cidades (exceto se contratado à parte)</li>
-            <li>Serviços não relacionados diretamente ao funeral</li>
-            <li>Despesas com alimentação ou hospedagem de familiares</li>
-            <li>Missas, cultos ou cerimônias religiosas</li>
-            <li>Lápides, monumentos ou ornamentações permanentes</li>
-          </ul>
-        </div>
-
-        <div className={S.card}>
-          <h2>Rede Credenciada</h2>
-          <p>
-            O Cartão Amigo Saúde possui uma ampla rede de funerárias credenciadas em todo o Brasil, 
-            oferecendo atendimento de qualidade e preços diferenciados para os beneficiários.
-          </p>
-          <p>
-            Para localizar a funerária credenciada mais próxima, entre em contato com a Central de 
-            Atendimento ou consulte o aplicativo Cartão Amigo Saúde.
-          </p>
-        </div>
-
-        <div className={S.card}>
-          <h2>Disposições Gerais</h2>
-          <p>
-            Este regulamento está sujeito a alterações mediante aviso prévio de 30 (trinta) dias aos 
-            titulares do Cartão Amigo Saúde.
-          </p>
-          <p>
-            O benefício está condicionado à adimplência das mensalidades do Cartão Amigo Saúde e ao 
-            cumprimento das condições estabelecidas neste regulamento.
-          </p>
-          <p>
-            Em caso de dúvidas ou necessidade de esclarecimentos adicionais, entre em contato com a 
-            Central de Atendimento do Cartão Amigo Saúde.
-          </p>
-          <p>
-            <strong>Cartão Amigo Saúde</strong>
-            <br />
-            Cuidando de você e da sua família em todos os momentos.
-          </p>
-        </div>
-      </div>
-       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
-        <Link
-          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
-          target="_blank"
-        >
-          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
-        </Link>
       </div>
     </div>
   )
 }
+
+export default FuneralAssistance
+
+// Hero image URL mais representativa
+const heroImageUrl = "https://images.unsplash.com/photo-1461031189510-2d263b000f65?ixlib=rb-4.0.3&q=80&w=2670&auto=format&fit=crop";

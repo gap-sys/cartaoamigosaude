@@ -6,6 +6,15 @@
   font-weight: $weight-medium;
   margin-bottom: 1rem;
   padding: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.iconLeft {
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn1 {
@@ -38,9 +47,18 @@
   border-radius: 3px;
   background-color: $color-primary;
   line-height: 15px;
+  margin-top: 0.275rem;
+  margin-bottom: 0.275rem;
   font-size: 15px;
   padding: 0.8rem 0;
 }
 
 .btn5 {
+  color: $color-snow;
+  font-weight: 400;
+  border-radius: 3px;
+  background-color: $color-success; // verde para CTA principal
+  line-height: 15px;
+  font-size: 15px;
+  padding: 0.8rem 0;
 }

@@ -8,6 +8,13 @@
   position: relative;
 }
 
+/* Variante full width para páginas que precisam ocupar tudo */
+.heroContainerFull {
+  width: 100%;
+  padding: 0 1rem; /* leve padding nas laterais */
+  position: relative;
+}
+
 .heroImage {
   width: 100%;
   height: 370px;
