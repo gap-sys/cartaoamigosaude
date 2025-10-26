@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Meta, Hero } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 import { IconInfoCircle, IconCircleCheck, IconTicket, IconDeviceMobile, IconMessageCircle } from '@tabler/icons-react'

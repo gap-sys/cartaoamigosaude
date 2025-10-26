@@ -1,10 +1,9 @@
-import { Button } from '../../components'
-import Link from 'next/link'
-import Hero from '../../components/common/hero/hero'
-import { Meta } from 'src/presentation/components'
-import { IMAGE } from 'src/presentation/assets'
-import { IconInfoCircle, IconExternalLink, IconPhoneCall, IconCircleCheck } from '@tabler/icons-react'
 import { useState } from 'react'
+
+import { Meta, Hero , Button } from 'src/presentation/components'
+import { IMAGE } from 'src/presentation/assets'
+
+import { IconInfoCircle, IconExternalLink, IconPhoneCall, IconCircleCheck } from '@tabler/icons-react'
 
 import S from './discount-medicines.module.scss'
 
