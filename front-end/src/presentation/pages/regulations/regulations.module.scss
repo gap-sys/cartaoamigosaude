@@ -1,0 +1,51 @@
+@import '../../styles/themes/light.scss';
+@import '../../styles/themes/mixins.scss';
+
+.page {
+  background: #16161E;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: var(--font-satoshi);
+}
+
+.heroSpacer {
+  margin-bottom: 2.075rem;
+  img { height: 320px !important; }
+  @media (max-width: 768px) { img { height: 150px !important; } }
+  @media (max-width: 480px) { img { height: 150px !important; } }
+}
+
+.container {
+  margin: 0;
+  /* Troca grid por block para evitar shrink e permitir largura total */
+  display: block;
+  /* Caso haja múltiplos blocos futuros, o gap não é necessário aqui */
+}
+
+/* Tabela ocupa a largura do container (igual ao Hero) */
+.container table { width: 100%; }
+
+/* Ajuste de links para ficar igual às outras páginas */
+.container a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* Espaçamentos e tipografia gerais do conteúdo */
+.container p { margin-bottom: 1rem; }
+
+/* Responsividade global alinhada ao padrão */
+@media (max-width: 768px) {
+  .container { /* sem alterações específicas; mantém largura total */ }
+}
+@media (max-width: 480px) {
+  .container { /* sem alterações específicas; mantém largura total */ }
+}
+
+/* Desktop: reduzir espaço entre imagem (Hero) e tabela */
+@media (min-width: 1024px) {
+  .container { margin-top: 0.5rem; }
+}

@@ -5,7 +5,8 @@
   @include container(1280px, 2rem auto 4rem auto);
   border: 1px solid #e1e4e8;
   border-radius: 4px;
-  margin-top: 4rem;
+  /* Espaço acima para equilibrar com o Hero */
+  margin-top: 1rem;
   overflow: hidden;
 }
 

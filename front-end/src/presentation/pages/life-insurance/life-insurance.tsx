@@ -28,12 +28,13 @@ const LifeInsurance: React.FC = () => {
             <h2>Definição do Seguro</h2>
           </div>
           <p>
-            Proteção ao titular para indenizar a família ou o próprio segurado em casos de:
-            <br />• Morte por acidente.
-            <br />• Invalidez permanente total por acidente.
+            É uma proteção ao Titular que tem como objetivo indenizar a família ou o próprio segurado em casos de morte por acidente ou invalidez por acidentes.
           </p>
           <p>
-            Garantidas pela seguradora América Seguros (CNPJ: 16.965.518/0001-08).
+            As coberturas do Seguro previsto neste item são garantidas pela seguradora América Seguros CNPJ 16.965.518/0001-08.
+          </p>
+          <p>
+            A adesão será compulsória aos Clientes que aderirem ao plano Cartão Amigo Saúde que contenha o benefício do Seguro, tratando-se de um seguro não-contributário.
           </p>
         </div>
 
@@ -49,7 +50,7 @@ const LifeInsurance: React.FC = () => {
               <span className={S.coverageTitle}>Morte Decorrente de Acidente</span>
             </div>
             <div className={S.coverageRight}>
-              <span>Garante aos beneficiários o pagamento de uma indenização em caso de morte do segurado decorrente de acidente.</span>
+              <span>Cobertura caso o Cliente venha a falecer em consequência de acidente pessoal coberto. Limite máximo: R$ 10.000,00.</span>
             </div>
           </div>
           <div className={S.coverageItem}>
@@ -58,7 +59,7 @@ const LifeInsurance: React.FC = () => {
               <span className={S.coverageTitle}>Invalidez Permanente Total por Acidente</span>
             </div>
             <div className={S.coverageRight}>
-              <span>Garante ao próprio segurado o pagamento de uma indenização em caso de invalidez permanente total por acidente.</span>
+              <span>Cobertura em caso do Cliente ter perda total, redução ou impotência funcional definitiva dos membros ou órgãos, em decorrência de lesão física sofrida pelo Cliente, em caráter permanente, em consequência de acidente pessoal coberto.</span>
             </div>
           </div>
           <div className={S.buttonContainerLeft}>
@@ -81,11 +82,11 @@ const LifeInsurance: React.FC = () => {
           <ul className={S.list}>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span><strong>IPTA:</strong> O próprio cliente ou, na impossibilidade, pessoa designada por lei.</span>
+              <span><strong>IPTA:</strong> O próprio cliente ou, na impossibilidade deste receber, será a pessoa designada por lei para tal finalidade.</span>
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span><strong>Morte Acidental:</strong> Herdeiros legais.</span>
+              <span><strong>Morte Acidental:</strong> Os herdeiros legais.</span>
             </li>
           </ul>
         </div>
@@ -107,15 +108,15 @@ const LifeInsurance: React.FC = () => {
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span>Indenizações por Morte Acidental e Invalidez Permanente Total não se acumulam.</span>
+              <span>As indenizações por Invalidez Permanente por Acidente e Morte Acidental não se acumulam.</span>
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span>Se houver pagamento por invalidez e, do mesmo acidente, ocorrer morte, o valor já pago será deduzido.</span>
+              <span>Se depois de pagar indenização por invalidez permanente por acidente, verificar-se a morte do Cliente, em consequência do mesmo acidente, a importância já paga por invalidez permanente deve ser deduzida do valor do capital segurado por morte.</span>
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span>Elegíveis: proponentes com idade máxima de 70 anos incompletos.</span>
+              <span>Elegíveis: proponentes com idade máxima de 70 anos incompletos na data de adesão do Seguro.</span>
             </li>
           </ul>
         </div>
@@ -127,7 +128,12 @@ const LifeInsurance: React.FC = () => {
             <h2>Aviso de Sinistro</h2>
           </div>
           <p><strong>0800 323 5084</strong></p>
-          <p>Entre em contato para notificar sinistros e obter orientações.</p>
+          <p>
+            É a comunicação formal específica de uma reclamação de terceiros, efetuada durante o período de vigência da apólice, ou Prazo Complementar ou Prazo Suplementar (se aplicável), que o segurado é obrigado a fazer à Seguradora para dar a esta, conhecimento imediato da ocorrência do sinistro.
+          </p>
+          <p>
+            Ocorrendo um sinistro que possa acarretar a responsabilidade da Seguradora, deverá ser comunicado através do Aviso de Sinistro, em carta registrada, telegrama, ou telefax dirigido à Seguradora ou a seu representante legal.
+          </p>
         </div>
 
         {/* Informações Importantes */}
@@ -143,11 +149,19 @@ const LifeInsurance: React.FC = () => {
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span>Não há franquia.</span>
+              <span>Não há franquia para as coberturas de Morte e Invalidez Permanente Total por Acidente.</span>
             </li>
             <li className={S.listItem}>
               <IconCircleCheck size={18} className={S.iconCheck} />
-              <span>Vigência vinculada ao Cartão Amigo Saúde.</span>
+              <span>A vigência do Seguro estará atrelada à vigência do CARTÃO AMIGO SAÚDE.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>A invalidez permanente deve ser comprovada através de declaração médica apresentada à seguradora.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>A seguradora se reserva o direito de submeter o segurado a exames médicos para comprovar a ocorrência de invalidez.</span>
             </li>
           </ul>
         </div>
@@ -158,6 +172,9 @@ const LifeInsurance: React.FC = () => {
             <IconInfoCircle size={20} className={S.titleIcon} />
             <h2>Mais Informações</h2>
           </div>
+          <p>
+            O Cliente e seus beneficiários devem consultar a Condição Geral do Seguro tratado neste item para tomar ciência dos riscos cobertos e excluídos de cada cobertura e documentação a ser apresentada em caso de sinistro.
+          </p>
           <div className={S.buttonGroup}>
             <Button
               typeStyle="btn4"

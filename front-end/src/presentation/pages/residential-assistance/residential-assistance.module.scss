@@ -1,79 +1,109 @@
 @import '../../styles/themes/light.scss';
 @import '../../styles/themes/mixins.scss';
 
+.page {
+  background: #16161E;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: var(--font-satoshi);
+}
+
+.heroSpacer {
+  margin-bottom: 1rem;
+  img { height: 320px !important; }
+  @media (max-width: 768px) { img { height: 150px !important; } }
+  @media (max-width: 480px) { img { height: 150px !important; } }
+}
+
 .container {
-  margin: 0 1rem;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card {
-  @include container(1250px, 2rem auto 2rem auto);
-  background: $color-snow;
-  color: $color-secondary;
+  width: 100%;
+  background: #1B1D27;
+  color: #e5e7eb;
   border-radius: 16px;
-  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.1);
-  border: 1px solid #c4c4c4;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border: 1px solid #1B1D27;
   font-size: 16px;
   line-height: 28px;
   font-weight: 500;
-  padding: 2rem;
+  padding: 1.25rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
   }
 
   h2 {
-    color: $color-secondary;
+    color: #a78bfa;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
   }
 
-  p {
-    margin-bottom: 1rem;
-  }
+  p { margin-bottom: 1rem; }
 
-  ul, ol {
-    margin-left: 1.25rem;
-    margin-bottom: 1rem;
-    
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style-type: decimal;
-  }
+  ul, ol { margin: 0 0 1rem 0; padding: 0; }
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: 14px;
     line-height: 24px;
   }
 }
 
-.buttonContainer {
-  display: flex;
+/* Containers de botões */
+.buttonContainer { display: flex; justify-content: center; margin-top: 1rem; }
+.buttonContainerLeft { display: flex; justify-content: flex-start; margin-top: 1.075rem; }
+
+/* Listas (escopo local dentro do card) */
+.card ul { list-style-type: disc; margin-left: 1.25rem; }
+.card ol { list-style-type: decimal; margin-left: 1.25rem; }
+.card li { margin-bottom: 0.5rem; }
+
+/* Linha de título com ícone */
+.titleRow { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; justify-content: center; width: 100%; }
+.titleRow h2 { margin: 0; text-align: center; }
+.titleIcon { color: #a78bfa; display: inline-flex; align-items: center; }
+
+/* Lista com ícones */
+.list { list-style: none; padding-left: 0; }
+.listItem { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; }
+.listItem span { display: inline-block; }
+.iconCheck { color: #00af7d; }
+.iconCheck, .iconCrossCircle, .iconCross {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  flex: 0 0 18px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
-  
-  @media (max-width: 768px) {
-    margin-top: 1rem;
-  }
+  margin-top: 5px;
 }
+.iconCheck svg, .iconCrossCircle svg, .iconCross svg { width: 18px; height: 18px; }
 
-.buttonContainerLeft {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 1.075rem;
+/* Centralização opcional */
+.centerText { text-align: center; }
+.centerText p { text-align: center; }
 
-  @media (max-width: 768px) {
-    margin-top: 0.875rem;
-  }
+/* Responsividade global */
+@media (max-width: 768px) {
+  .container { gap: 0.75rem; }
+  .titleRow { gap: 0.375rem; }
+  .card h2 { font-size: 1.35rem; }
+}
+@media (max-width: 480px) {
+  .container { gap: 0.6rem; }
+  .card { padding: 0.875rem; }
+  .card h2 { font-size: 1.2rem; }
+  .titleRow { gap: 0.3rem; }
 }

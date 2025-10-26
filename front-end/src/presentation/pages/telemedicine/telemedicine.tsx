@@ -2,20 +2,27 @@ import Link from 'next/link'
 
 import { Hero, Meta } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
+import { IconInfoCircle, IconClipboardList, IconCircleCheck } from '@tabler/icons-react'
 
 import S from './telemedicine.module.scss'
 
 const Telemedicine = () => {
   return (
-    <div>
+    <div className={S.page}>
       <Meta
         title="Telemedicina - Cartão Amigo Saúde"
         description="Atendimento médico online para condições clínicas de menor gravidade. Agende sua consulta por vídeo com o Cartão Amigo Saúde e tenha acesso rápido, seguro e gratuito ao Clínico Geral."
         keywords="telemedicina, consulta online, atendimento por vídeo, médico remoto, Cartão Amigo Saúde, saúde digital, agendamento online"
       />
-      <Hero imageUrl={IMAGE.TELEMEDICINA_MULHER.src} text="Telemedicina" />
+      <div className={S.heroSpacer}>
+        <Hero imageUrl={IMAGE.TELEMEDICINA_MULHER.src} text="Telemedicina" />
+      </div>
       <div className={S.container}>
         <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconInfoCircle size={20} className={S.titleIcon} />
+            <h2>Informações Importantes</h2>
+          </div>
           <p>
             TRATA-SE DE UM SERVIÇO QUE NÃO REPRESENTA OU SUBSTITUI UMA CONSULTA MÉDICA PRESENCIAL PARA TRATAMENTOS DE
             SINTOMAS/CONDIÇÕES CLÍNICAS DE MAIOR GRAVIDADE, COMO POR EXEMPLO HEMORRAGIAS, FRATURAS ÓSSEAS, INFARTOS,
@@ -30,14 +37,12 @@ const Telemedicine = () => {
             O Cliente será informado pelo médico acerca de todas as limitações inerentes ao uso da telemedicina, tendo
             em vista a impossibilidade de realização de exame físico durante a consulta.
           </p>
-          <p>
-            É de responsabilidade do Cliente acessar a plataforma na data e horário agendados previamente (com limite
-            máximo de 5 (cinco) minutos de tolerância de atraso), com uma conexão estável de internet. A duração da
-            consulta online não terá limite de horário, e durante o atendimento o Cliente poderá enviar arquivos e
-            receber arquivos do médico, tais como, atestados, pedidos de exames e prescrições médicas;
-          </p>
         </div>
         <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconInfoCircle size={20} className={S.titleIcon} />
+            <h2>Condições do Serviço</h2>
+          </div>
           <p>Carência: 2 (dois) dias úteis após a ativação do Cartão Virtual CARTÃO AMIGO SAÚDE.</p>
           <p>Retorno: sem custo se marcado pelo médico dentro do prazo de 15 dias da realização da Consulta.</p>
           <p>
@@ -49,36 +54,41 @@ const Telemedicine = () => {
             Clínico Geral.
           </p>
           <p>
-            Caso o Cliente entre na fila de e não compareça, será considerado como falta e após a terceira falta o
-            serviço não estará mais disponível. Cada Cliente terá o direito a 3 (três) faltas
+            Caso o Cliente entre na fila e não compareça, será considerado como falta e após a terceira falta o
+            serviço não estará mais disponível. Cada Cliente terá o direito a 3 (três) faltas.
           </p>
         </div>
         <div className={S.card}>
+          <div className={S.titleRow}>
+            <IconClipboardList size={20} className={S.titleIcon} />
+            <h2>Como utilizar</h2>
+          </div>
           <p>Para utilização do serviço de Telemedicina sem Carga/Recarga com agendamento o Cliente deverá:</p>
-          <ul>
-            <li>
-              1 – Clicar no botão “AGENDAR” consultas, exames, dentistas, e mais…;
-              <br />
+          <ul className={S.list}>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Clicar em “AGENDAR” consultas, exames, dentistas, e mais…</span>
             </li>
-            <li> 2 – Selecionar para quem é o agendamento, titular ou dependentes;</li>
-            <li> 3 – Clicar no quadro “Consulta por vídeo”;</li>
-            <li> 4 – Aguardar o contato para prosseguimento no atendimento</li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Selecionar para quem é o agendamento, titular ou dependentes.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Clicar no quadro “Consulta por vídeo”.</span>
+            </li>
+            <li className={S.listItem}>
+              <IconCircleCheck size={18} className={S.iconCheck} />
+              <span>Aguardar o contato para prosseguimento no atendimento.</span>
+            </li>
           </ul>
           <p>
             Em caso de necessidade de reagendamento, é de responsabilidade do Cliente cancelar o atendimento com até 24
             (vinte e quatro) horas antes do horário agendado. O cancelamento e o reagendamento deverão ser solicitados
             via Central de Atendimento Cartão Amigo Saúde. Caso o Cliente faça o agendamento e não compareça no horário
-            marcado, será considerado como falta e após a terceira falta o serviço não estará mais disponível
+            marcado, será considerado como falta e após a terceira falta o serviço não estará mais disponível.
           </p>
         </div>
-      </div>
-      <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
-        <Link
-          href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."
-          target="_blank"
-        >
-          <img src={IMAGE.ICONE_WHATSAPP.src} alt="WhatsApp" style={{ width: '80px', height: '80px', borderRadius: '50%', boxShadow: '2px 2px 10px rgba(0,0,0,0.3)' }} />
-        </Link>
       </div>
     </div>
   )
