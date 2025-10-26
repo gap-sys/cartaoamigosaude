@@ -1,5 +1,6 @@
 import { Button, Doubt, Hero, Meta, Spotlight } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
+import Image from 'next/image'
 
 import S from './schedule.module.scss'
 
@@ -23,13 +24,13 @@ const Schedule = () => {
             <a href="https://app.cartaoamigosaude.com.br">
               <Button typeStyle="btn2" width="150px" label="App" />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.">
+            <a href="https://api.whatsapp.com/send?phone=5519989512404&text=Ol%C3%A1,%20tudo%20bem?%20Estava%20no%20site%20de%20voc%C3%AA%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida.">
               <Button typeStyle="btn2" width="150px" label="WhatsApp" />
             </a>
           </div>
         </div>
         <div className={S['image-section']}>
-          <img src={IMAGE.EMPRESARIO_COM_CELULAR.src} alt="Empresario com celular" className={S.img} />
+          <Image src={IMAGE.EMPRESARIO_COM_CELULAR.src} alt="Empresario com celular" className={S.img} fill sizes="(max-width: 980px) 100vw, 50vw" />
         </div>
       </div>
       <Spotlight

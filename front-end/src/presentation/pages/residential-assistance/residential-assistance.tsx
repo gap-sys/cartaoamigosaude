@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { Hero, Meta, Button } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
 import { IconInfoCircle, IconUsers, IconCircleCheck, IconClipboardList, IconCash, IconPhoneCall, IconBrandWhatsapp } from '@tabler/icons-react'
