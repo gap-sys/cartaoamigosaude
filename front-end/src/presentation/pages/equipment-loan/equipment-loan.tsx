@@ -1,6 +1,3 @@
-import Link from 'next/link'
-import { useState } from 'react'
-
 import { Button } from '../../components'
 import { Hero, Meta } from 'src/presentation/components'
 import { IMAGE } from 'src/presentation/assets'
@@ -9,7 +6,7 @@ import { IconInfoCircle, IconCircleCheck, IconPhoneCall, IconBrandWhatsapp } fro
 import S from './equipment-loan.module.scss'
 
 const Equipamentloan = () => {
-  const [isModalOpen, setModalOpen] = useState(false)
+  // removed unused modal state
   return (
     <div className={S.page}>
       <Meta
