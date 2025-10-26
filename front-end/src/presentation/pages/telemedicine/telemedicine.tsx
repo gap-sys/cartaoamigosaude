@@ -13,7 +13,7 @@ const Telemedicine = () => {
         keywords="telemedicina, consulta online, atendimento por vídeo, médico remoto, Cartão Amigo Saúde, saúde digital, agendamento online"
       />
       <div className={S.heroSpacer}>
-        <Hero imageUrl={IMAGE.TELEMEDICINA_MULHER.src} text="Telemedicina" />
+        <Hero imageUrl={IMAGE.TELEMEDICINA_MULHER.src} text="Telemedicina" fullWidth />
       </div>
       <div className={S.container}>
         <div className={S.card}>

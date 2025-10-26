@@ -6,6 +6,7 @@ import { IMAGE } from 'src/presentation/assets'
 import { IconInfoCircle, IconExternalLink, IconPhoneCall, IconCircleCheck } from '@tabler/icons-react'
 
 import S from './discount-medicines.module.scss'
+import Image from 'next/image'
 
 const DiscountMedicines: React.FC = () => {
   const heroImageUrl = IMAGE.MEDICAMENTOS.src
@@ -58,7 +59,7 @@ const DiscountMedicines: React.FC = () => {
             aria-label="Ampliar imagem da pesquisa de medicamentos"
             onClick={() => setIsImageOpen(true)}
           >
-            <img src={IMAGE.LAMINA.src} alt="Pesquisa de medicamentos" style={{ width: '100%', borderRadius: '12px' }} />
+            <Image src={IMAGE.LAMINA.src} alt="Pesquisa de medicamentos" width={1280} height={720} style={{ width: '100%', height: 'auto', borderRadius: '12px' }} sizes="(max-width: 1280px) 100vw, 1280px" />
           </div>
           <div className={S.buttonContainerLeft}>
             <Button
@@ -97,7 +98,7 @@ const DiscountMedicines: React.FC = () => {
       {isImageOpen && (
         <div className={S.modalOverlay} onClick={() => setIsImageOpen(false)} role="dialog" aria-modal="true">
           <div className={S.modalContent} onClick={(e) => e.stopPropagation()}>
-            <img src={IMAGE.LAMINA.src} alt="Pesquisa de medicamentos ampliada" />
+            <Image src={IMAGE.LAMINA.src} alt="Pesquisa de medicamentos ampliada" width={1600} height={900} style={{ width: '90vw', height: 'auto', borderRadius: '8px' }} sizes="90vw" />
             <button className={S.closeBtn} onClick={() => setIsImageOpen(false)}>Fechar</button>
           </div>
         </div>

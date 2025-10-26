@@ -13,7 +13,7 @@ const Activation = () => {
         keywords="ativação cartão, Cartão Amigo Saúde, ativar benefícios, descontos saúde, processo de ativação, começar a usar"
       />
       <div className={S.heroSpacer}>
-        <Hero imageUrl={IMAGE.DOIS_HOMENS_ACORDO.src} text="Ativação do Cartão" />
+        <Hero imageUrl={IMAGE.DOIS_HOMENS_ACORDO.src} text="Ativação do Cartão" fullWidth />
       </div>
       <div className={S.container}>
         <div className={S.card}>

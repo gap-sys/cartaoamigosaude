@@ -15,7 +15,7 @@ const Equipamentloan = () => {
         keywords="empréstimo de equipamentos, locação de equipamentos médicos, assistência hospitalar, Cartão Amigo Saúde, aluguel de aparelhos, suporte médico"
       />
       <div className={S.heroSpacer}>
-        <Hero imageUrl={IMAGE.EMPRESTIMO_EQUIPAMENTOS.src} text="Equipamentos de Saúde" />
+        <Hero imageUrl={IMAGE.EMPRESTIMO_EQUIPAMENTOS.src} text="Equipamentos de Saúde" fullWidth />
       </div>
 
       <div className={S.container}>

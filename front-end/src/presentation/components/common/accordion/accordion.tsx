@@ -1,14 +1,15 @@
 import S from './accordion.module.scss'
+import Link from 'next/link'
 
 const ITEMS = [
-  { title: 'Ativação e Utilização', path: '/ativacao-e-utilizacao' },
-  { title: 'Telemedicina', path: '/telemedicina' },
   { title: 'Desconto em Farmácias', path: '/desconto-em-farmacias' },
-  { title: 'Empréstimo de Equipamentos Médico Hospitalar', path: '/emprestimo-de-equipamentos-medico-hospitalar' },
-  { title: 'Seguro de Vida', path: '/seguro-de-vida' },
-  { title: 'Assistência Residencial', path: '/assistencia-residencial' },
   { title: 'Auxílio Funeral', path: '/auxilio-funeral' },
+  { title: 'Seguro de Vida', path: '/seguro-de-vida' },
+  { title: 'Empréstimo de Equipamentos Médico Hospitalar', path: '/emprestimo-de-equipamentos-medico-hospitalar' },
+  { title: 'Assistência Residencial', path: '/assistencia-residencial' },
+  { title: 'Ativação e Utilização', path: '/ativacao-e-utilizacao' },
   { title: 'Clube Certo', path: '/clube-certo' },
+  { title: 'Telemedicina', path: '/telemedicina' },
 ]
 
 const Accordion = () => {
@@ -16,9 +17,9 @@ const Accordion = () => {
     <div className={S.accordion}>
       {ITEMS.map((item, index) => (
         <div key={index} className={S.accordionItem}>
-          <a className={S.accordionHeader} href={item.path} rel="noopener noreferrer">
+          <Link className={S.accordionHeader} href={item.path}>
             <span>{item.title}</span>
-          </a>
+          </Link>
         </div>
       ))}
     </div>
