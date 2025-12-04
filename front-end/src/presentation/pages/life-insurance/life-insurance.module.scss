@@ -16,12 +16,12 @@
   }
   @media (max-width: 768px) {
     img {
-      height: 150px !important;
+      height: 90px !important;
     }
   }
   @media (max-width: 480px) {
     img {
-      height: 150px !important;
+      height: 140px !important;
     }
   }
 }
@@ -177,6 +177,10 @@
   padding: 0.75rem 1rem;
   border-radius: 12px;
   background: $color-grayLight;
+  margin-bottom: 0.75rem;
+}
+.coverageItem:last-child {
+  margin-bottom: 0;
 }
 .coverageLeft {
   display: flex;
