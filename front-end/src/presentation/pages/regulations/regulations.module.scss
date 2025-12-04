@@ -2,7 +2,7 @@
 @import '../../styles/themes/mixins.scss';
 
 .page {
-  background: #16161E;
+  background: $color-snow;
   min-height: 100vh;
   padding: 1rem;
   font-family: var(--font-satoshi);
@@ -10,9 +10,19 @@
 
 .heroSpacer {
   margin-bottom: 2.075rem;
-  img { height: 320px !important; }
-  @media (max-width: 768px) { img { height: 150px !important; } }
-  @media (max-width: 480px) { img { height: 150px !important; } }
+  img {
+    height: 320px !important;
+  }
+  @media (max-width: 768px) {
+    img {
+      height: 150px !important;
+    }
+  }
+  @media (max-width: 480px) {
+    img {
+      height: 150px !important;
+    }
+  }
 }
 
 .container {
@@ -23,11 +33,13 @@
 }
 
 /* Tabela ocupa a largura do container (igual ao Hero) */
-.container table { width: 100%; }
+.container table {
+  width: 100%;
+}
 
 /* Ajuste de links para ficar igual às outras páginas */
 .container a {
-  color: #a78bfa;
+  color: #12567a;
   text-decoration: none;
 }
 .container a:hover {
@@ -35,17 +47,25 @@
 }
 
 /* Espaçamentos e tipografia gerais do conteúdo */
-.container p { margin-bottom: 1rem; }
+.container p {
+  margin-bottom: 1rem;
+}
 
 /* Responsividade global alinhada ao padrão */
 @media (max-width: 768px) {
-  .container { /* sem alterações específicas; mantém largura total */ }
+  .container {
+    /* sem alterações específicas; mantém largura total */
+  }
 }
 @media (max-width: 480px) {
-  .container { /* sem alterações específicas; mantém largura total */ }
+  .container {
+    /* sem alterações específicas; mantém largura total */
+  }
 }
 
 /* Desktop: reduzir espaço entre imagem (Hero) e tabela */
 @media (min-width: 1024px) {
-  .container { margin-top: 0.5rem; }
+  .container {
+    margin-top: 0.5rem;
+  }
 }

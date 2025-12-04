@@ -2,7 +2,7 @@
 @import '../../styles/themes/mixins.scss';
 
 .page {
-  background: #16161E;
+  background: $color-snow;
   min-height: 100vh;
   padding: 1rem;
   font-family: var(--font-satoshi);
@@ -11,9 +11,19 @@
 .heroSpacer {
   margin-bottom: 1rem;
   /* Responsividade do hero igual ao Funeral */
-  img { height: 320px !important; }
-  @media (max-width: 768px) { img { height: 150px !important; } }
-  @media (max-width: 480px) { img { height: 150px !important; } }
+  img {
+    height: 320px !important;
+  }
+  @media (max-width: 768px) {
+    img {
+      height: 150px !important;
+    }
+  }
+  @media (max-width: 480px) {
+    img {
+      height: 150px !important;
+    }
+  }
 }
 
 .container {
@@ -24,11 +34,11 @@
 
 .card {
   width: 100%;
-  background: #1B1D27;
-  color: #e5e7eb;
+  background: $color-snow;
+  color: $color-darkHigh;
   border-radius: 16px;
   box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
-  border: 1px solid #1B1D27;
+  border: 1px solid #e1e4e8;
   font-size: 16px;
   line-height: 28px;
   font-weight: 500;
@@ -41,7 +51,7 @@
   }
 
   h2 {
-    color: #a78bfa;
+    color: #12567a;
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
@@ -49,27 +59,63 @@
     text-align: left;
   }
 
-  p { margin-bottom: 1rem; }
+  p {
+    margin-bottom: 1rem;
+  }
 
-  ul, ol { margin: 0 0 1rem 0; padding: 0; }
+  ul,
+  ol {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
 
   /* Responsividade global para Life Insurance */
   @media (max-width: 768px) {
-    .container { gap: 0.75rem; }
-    .card { padding: 1rem; font-size: 14px; line-height: 24px; }
-    .card h2 { font-size: 1.35rem; }
-    .titleRow { gap: 0.375rem; }
-    .coverageItem { gap: 0.75rem; grid-template-columns: 1fr; align-items: flex-start; }
-    .coverageLeft { align-items: flex-start; }
-    .coverageTitle { white-space: normal; }
+    .container {
+      gap: 0.75rem;
+    }
+    .card {
+      padding: 1rem;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .card h2 {
+      font-size: 1.35rem;
+    }
+    .titleRow {
+      gap: 0.375rem;
+    }
+    .coverageItem {
+      gap: 0.75rem;
+      grid-template-columns: 1fr;
+      align-items: flex-start;
+    }
+    .coverageLeft {
+      align-items: flex-start;
+    }
+    .coverageTitle {
+      white-space: normal;
+    }
   }
   @media (max-width: 480px) {
-    .container { gap: 0.6rem; }
-    .card { padding: 0.875rem; }
-    .card h2 { font-size: 1.2rem; }
-    .titleRow { gap: 0.3rem; }
-    .coverageItem { gap: 0.6rem; }
-    .coverageTitle { white-space: normal; }
+    .container {
+      gap: 0.6rem;
+    }
+    .card {
+      padding: 0.875rem;
+    }
+    .card h2 {
+      font-size: 1.2rem;
+    }
+    .titleRow {
+      gap: 0.3rem;
+    }
+    .coverageItem {
+      gap: 0.6rem;
+    }
+    .coverageTitle {
+      white-space: normal;
+    }
   }
 }
 
@@ -81,17 +127,31 @@
   margin-bottom: 0.875rem; /* mais espaço do título para conteúdo/lista */
 }
 .titleIcon {
-  color: #a78bfa;
+  color: #12567a;
   display: inline-flex;
   align-items: center;
 }
 
 /* Lista padrão */
-.list { list-style: none; padding-left: 0; }
-.listItem { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; }
-.listItem span { display: inline-block; }
-.iconCheck { color: #00af7d; }
-.iconCheck, .iconCrossCircle, .iconCross {
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.listItem span {
+  display: inline-block;
+}
+.iconCheck {
+  color: #00af7d;
+}
+.iconCheck,
+.iconCrossCircle,
+.iconCross {
   width: 18px;
   height: 18px;
   min-width: 18px;
@@ -101,7 +161,12 @@
   justify-content: center;
   margin-top: 5px; /* desce levemente para alinhar com texto */
 }
-.iconCheck svg, .iconCrossCircle svg, .iconCross svg { width: 18px; height: 18px; }
+.iconCheck svg,
+.iconCrossCircle svg,
+.iconCross svg {
+  width: 18px;
+  height: 18px;
+}
 
 /* Coberturas em linhas */
 .coverageItem {
@@ -111,19 +176,51 @@
   gap: 1rem;
   padding: 0.75rem 1rem;
   border-radius: 12px;
-  background: #171a24;
+  background: $color-grayLight;
 }
-.coverageLeft { display: flex; align-items: center; gap: 0.5rem; }
-.coverageTitle { white-space: nowrap; font-weight: 600; }
-.coverageRight { display: flex; align-items: center; color: #e5e7eb; }
-.coverageIconRed { color: #ff6b6b; margin-top: 3px; }
+.coverageLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.coverageTitle {
+  white-space: nowrap;
+  font-weight: 600;
+}
+.coverageRight {
+  display: flex;
+  align-items: center;
+  color: #e5e7eb;
+}
+.coverageIconRed {
+  color: #ff6b6b;
+  margin-top: 3px;
+}
 
 /* Botões */
-.buttonContainer { display: flex; justify-content: center; margin-top: 1rem; }
-.buttonContainerLeft { display: flex; justify-content: flex-start; margin-top: 1rem; }
-.buttonGroup { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.buttonContainerLeft {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.buttonGroup {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
 
-.fullWidthBtn { width: 100%; }
+.fullWidthBtn {
+  width: 100%;
+}
 
-.centerText { text-align: center; }
-.centerText p { text-align: center; }
+.centerText {
+  text-align: center;
+}
+.centerText p {
+  text-align: center;
+}

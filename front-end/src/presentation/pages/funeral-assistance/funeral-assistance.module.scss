@@ -2,7 +2,7 @@
 @import '../../styles/themes/mixins.scss';
 
 .page {
-  background: #16161E;
+  background: $color-snow;
   min-height: 100vh;
   padding: 1rem;
   /* leve padding geral */
@@ -41,11 +41,11 @@
 
 .card {
   width: 100%;
-  background: #1B1D27;
-  color: #e5e7eb;
+  background: $color-snow;
+  color: $color-darkHigh;
   border-radius: 16px;
   box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
-  border: 1px solid #1B1D27;
+  border: 1px solid #e1e4e8;
   font-size: 16px;
   line-height: 28px;
   font-weight: 500;
@@ -59,7 +59,7 @@
   }
 
   h2 {
-    color: #a78bfa;
+    color: #12567a;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -101,7 +101,7 @@
 }
 
 .titleIcon {
-  color: #a78bfa;
+  color: #12567a;
 }
 
 .titleIconDanger {
@@ -111,7 +111,7 @@
 /* subtítulo abaixo do título em exclusões */
 .sectionSubtitle {
   text-align: center;
-  color: #cbd5e1;
+  color: $color-grayMedium;
   margin: -0.25rem 0 0.75rem 0;
 }
 

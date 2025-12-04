@@ -215,7 +215,7 @@ export const ResidentialAssistance: React.FC = () => {
       <div className={S.container}>
         <div className={S.card + ' ' + S.centerText}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.875rem' }}>
-            <IconPhoneCall size={28} color="#6C75FF" />
+            <IconPhoneCall size={28} color="#12567A" />
           </div>
           <p>Em caso de dúvidas, fale com nossa equipe pelo WhatsApp.</p>
           <div className={S.buttonContainer}>

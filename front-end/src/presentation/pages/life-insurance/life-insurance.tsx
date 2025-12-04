@@ -180,7 +180,7 @@ const LifeInsurance: React.FC = () => {
               typeStyle="btn4"
               label="Visitar Website"
               width="100%"
-              style={{ backgroundColor: '#7060F0' }}
+              style={{ backgroundColor: '#12567A' }}
               iconLeft={<IconExternalLink size={18} />}
               onClick={() => window.open('http://cartaoamigosaude.com.br/', '_blank')}
             />
